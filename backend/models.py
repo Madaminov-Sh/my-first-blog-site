@@ -4,6 +4,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 70)
     description = models.TextField()
     slug = models.SlugField(max_length = 40)
+    image = models.ImageField(upload_to = "images/", default = "images/default.jpg")
 
     def __str__(self):
         return self.slug
